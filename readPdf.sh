@@ -7,7 +7,7 @@
 
 IFS=$'\n'
 declare -a pdfs
-pdfs=($(du -a ~/docs/Literatur | grep ".pdf" | cut -f2-)) # Replace ~/docs/Literatur with your directory.
+pdfs=($(du -a ~/docs/literature | grep ".pdf" | cut -f2-)) # Replace ~/docs/Literatur with your directory.
 
 # Gruvbox Dark Colors
 # Background:   #282828
