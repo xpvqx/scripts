@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Gruvbox color palette for dmenu
 NB='#282828'
 NF='#ebdbb2'
 SB='#458588'
 SF='#fbf1c7'
+FONT='monospace-10'
 
 LAPTOP=$(xrandr | grep " connected" | grep -E "eDP|LVDS" | awk '{print $1}')
 HDMI=$(xrandr | grep " connected" | grep -E "HDMI|DP|DP-1" | awk '{print $1}')
@@ -15,7 +15,7 @@ if [ -z "$HDMI" ]; then
 fi
 
 CHOICE=$(echo -e "Mirror\nExtend Right\nLaptop Only\nHDMI Only" | dmenu -i -p "Display mode:" \
-    -nb "$NB" -nf "$NF" -sb "$SB" -sf "$SF")
+    -nb "$NB" -nf "$NF" -sb "$SB" -sf "$SF" -fn "$FONT")
 
 case "$CHOICE" in
     Mirror)
