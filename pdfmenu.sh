@@ -14,10 +14,6 @@ if [[ ! -z $choice ]]; then
 	for i in "${!pdfs[@]}" ; do
 		if [[ $choice == "${pdfs[$i]##*/}" ]] ; then
 			_bookType="${pdfs[$i]%/*}"
-            # uncomment these lines if libnotify is installed
-			# notify-send "$(echo -e "${_bookType##*/}\n" \
-            #     | tr '[:lower:]' '[:upper:]')" "$choice" \
-			# 	-i "$(echo "${PWD}/pdf.png")"
 			zathura "${pdfs[$i]}" &
 			break
 		fi
