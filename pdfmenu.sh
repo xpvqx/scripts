@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 IFS=$'\n'
 declare -a pdfs
-pdfs=($(du -a ~/hv/Literatur | grep ".pdf" | cut -f2-)) 
+pdfs=($(du -a ~/docs/hv/Literatur | grep ".pdf" | cut -f2-)) 
 
 choice=$(printf "%s\n" "${pdfs[@]##*/}" | \
-	dmenu -l 20 \
+    dmenu -l 20 \
     -nb "#282828" -nf "#ebdbb2" \
-    -sb "#458588" -sf "#282828" \
+    -sb "#8dbf7c" -sf "#282828" \
     -fn "monospace:size=10" \
     -p "pdf: " -i)
 
