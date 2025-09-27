@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 IFS=$'\n'
 declare -a pdfs
-pdfs=($(du -a ~/docs/hv/Literatur | grep ".pdf" | cut -f2-)) 
+pdfs=($(du -a ~/docs/hv_local/Literatur | grep ".pdf" | cut -f2-)) 
 
 choice=$(printf "%s\n" "${pdfs[@]##*/}" | \
     dmenu -l 20 \
