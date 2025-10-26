@@ -7,7 +7,7 @@ choice=$(printf "%s\n" "${pdfs[@]##*/}" | \
     dmenu -l 20 \
     -nb "#222222" -nf "#bbbbbb" \
     -sb "#444444" -sf "#ffffff" \
-    -fn "monospace:size=10" \
+    -fn "terminus:size=12" \
     -p "pdf: " -i)
 
 if [[ ! -z $choice ]]; then
