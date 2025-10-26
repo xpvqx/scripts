@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-NF="#ebdbb2"
-NB="#282828"
-SF="#282828"
-SB="#fabd2f"
-FONT="monospace:size=10"
+NF="#bbbbbb"   # normal foreground (outside)
+NB="#222222"   # normal background (outside)
+SF="#ffffff"   # selected foreground (inside)
+SB="#444444"   # selected background (inside)
+FONT="terminus:size=12"
 
 DMENU="dmenu -i -l 4 -fn $FONT -nf $NF -nb $NB -sf $SF -sb $SB"
 
