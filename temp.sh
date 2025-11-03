@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# List all thermal zones and print their temperatures in Celsius
 for zone in /sys/class/thermal/thermal_zone*/temp; do
   temp=$(<"$zone")
   zone_name=$(basename "$(dirname "$zone")")
