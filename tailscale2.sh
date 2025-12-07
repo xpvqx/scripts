@@ -1,5 +1,5 @@
 if tailscale status 2>/dev/null | grep -q "100\."; then
-    echo "TS:  "
+    echo "VPN:  "
 else
-    echo "TS:  "
+    echo "VPN:  "
 fi
